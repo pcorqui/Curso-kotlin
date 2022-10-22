@@ -15,6 +15,13 @@ fun main(){
     println(c.enableAbs(false))
     println("$a + $c = ${sum(a,c.enableAbs(false))}")
     println("$a + ${c.enableAbs(true)} = ${sum(a,c.enableAbs(true))}")
+
+    newTopic("sobrecarga")
+    showProduct("soda", "10%")
+    showProduct("Pan")
+    showProduct("Caramelo", "15%")
+    //nombrar el argumento para indicar el parametro pasado
+    showProduct("Jugo", validity = "15 de marzo")
 }
 
 fun newTopic(s: String) {
@@ -44,3 +51,9 @@ fun suboptimizada(a:Int, b:Int) = a -b
 //dentro de kotlin no existe el operador ternario
 //sirven para agregar funciones a la clase
 infix fun Int.enableAbs(enable:Boolean) = if (enable) abs(this) else this
+
+//funciones sobrecargadas
+//acepta valores por default
+fun showProduct(name:String, promo:String = "Sin promocion", validity: String = "agotar existencias"){
+    println("$name = $promo hasta $validity}" )
+}
