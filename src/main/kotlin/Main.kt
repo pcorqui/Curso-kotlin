@@ -26,4 +26,12 @@ fun main(args: Array<String>) {
     val segundoValor = 100
     val tercerValor = primerValor.minus(segundoValor)
     print(tercerValor)
+
+    val apellido = "cortes"
+    val paul = "paul"
+
+    val nombreCompleto = paul + apellido
+    val nombreCompletoTemplate = "My name is $paul $apellido"
+    println(nombreCompleto)
+    println(nombreCompletoTemplate) // en kotlin hay interpolacion
 }
