@@ -26,4 +26,23 @@ fun main(){
     println(myUser)
     println(bro)
     println(friend)
+
+    //con las funciones de alcance pones el contexto el objeto pasado a la funcion
+    newTopic("funciones de alcance")
+    with(smartPhone){
+        println("private? $isPrivate")
+        call()
+    }
+
+    /*friend.group = Group.Work.ordinal
+    friend.name = "Juan"
+    friend.lastName = "Tellez"
+    */
+    friend.apply {
+        group = Group.Work.ordinal
+        name = "Juan"
+        lastName = "Tellez"
+    }
+
+    println(friend)
 }
