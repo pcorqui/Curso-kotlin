@@ -25,7 +25,7 @@ fun main(){
 }
 
 fun newTopic(s: String) {
-    println("************* ${s} ***************");
+    println("$separator ${s} $separator")
 }
 
 //por default las funciones en kotlin son public

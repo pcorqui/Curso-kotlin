@@ -1,3 +1,8 @@
+//const es compilada en tiempo de compilacion
+//mientras val es en tiempo de ejecucion
+//cuando la variable es constante es mejor hacerla global const val
+const val separator = "***************"
+
 fun main(){
     newTopic("Bucles")
 
