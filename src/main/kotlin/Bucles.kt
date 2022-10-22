@@ -2,7 +2,7 @@ fun main(){
     newTopic("Bucles")
 
     showPersons("Angel", "Mary","Fany")
-    showPersons("angel","mary","sergio","alex")
+    showPersons("angel","mary","sergio","alex","paul")
 }
 
 fun showPersons(p1: String, p2:String, p3:String){
@@ -14,6 +14,17 @@ fun showPersons(p1: String, p2:String, p3:String){
 //pasar arreglo de variables
 //kotlin acepta argumentos variables
 fun showPersons(vararg persons: String){
-    println(persons[0])
-    println(persons[1])
+    newTopic("For")
+    //ciclo for
+    for(person in persons){
+        println(person)
+    }
+
+    newTopic("While")
+    var index = 0
+    while (index < persons.size){
+        println(persons[index])
+        index++
+    }
+    
 }
