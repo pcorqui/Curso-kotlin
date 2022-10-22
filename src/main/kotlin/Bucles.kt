@@ -2,7 +2,7 @@ fun main(){
     newTopic("Bucles")
 
     showPersons("Angel", "Mary","Fany")
-    showPersons("angel","mary","sergio","alex","paul")
+    showPersons("angel","Mary","sergio","alex","paul")
 }
 
 fun showPersons(p1: String, p2:String, p3:String){
@@ -23,8 +23,20 @@ fun showPersons(vararg persons: String){
     newTopic("While")
     var index = 0
     while (index < persons.size){
+        if (persons[index] == "Mary") println("Es mary")
         println(persons[index])
         index++
     }
-    
+
+    //sentencia when equivalente a Switch
+    newTopic("When")
+    index = (0..persons.size -1).random()
+    when(persons[index]){
+        "angel" -> println("Es angel")
+        "Mary" -> {
+            println("ir a otra pantalla")
+            println("2+4")
+        }
+        else -> println(persons[index])
+    }
 }
