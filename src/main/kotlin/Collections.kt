@@ -35,4 +35,24 @@ fun main(){
     userSelectList.add(myUser) //se permiten los elementos repetidos
     userSelectList.add(myUser)
     println(userSelectList)
+
+    //mapas o diccionarios
+    //objetos clave-valor
+    newTopic("Map")
+    val usersMap = mutableMapOf<Int, User>()
+    println(usersMap)
+    usersMap.put(myUser.id.toInt(),myUser)
+    usersMap.put(myUser.id.toInt(),myUser) // no puedes duplicar aqui
+    println(usersMap)
+    usersMap.put(friend.id.toInt(),friend)
+    println(usersMap)
+    usersMap.remove(2)
+    println(usersMap)
+    println(usersMap.isEmpty())
+    println(usersMap.containsKey(0))
+    usersMap.put(bro.id.toInt(), bro)
+    usersMap.put(friend.id.toInt(), friend)
+    println(usersMap)
+    println(usersMap.keys)
+    println(usersMap.values)
 }
